@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru-ru">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="description" content="The official AdvancedNMotd API documentation page."/>
+		<meta name="keywords" content="AdvancedNMotd api, AdvancedNMotd, AdvancedNMotdAPI, AdvancedNMotd extension, AdvancedNMotdExtension, AdvancedNMotd custom furmat rule, AdvancedNMotd custom placeholder"/>
+		<meta name="author" content="NamerPRO"/>
+		<link rel="stylesheet" type="text/css" href="css/docs-article.css"/>
+		
+		<script type="text/javascript" src="js/documentation.js"></script>
+		
+		<!-- Connecting HTML tags: theme-component, menu-component, report-component -->
+		<script type="text/javascript" src="js/docsMenuElement.js"></script>
+		<script type="text/javascript" src="js/docsThemeElement.js"></script>
+		<script type="text/javascript" src="js/docsReportElement.js"></script>
+		<!-- End of connecting HTML tags: theme-component, menu-component, report-component -->
+		
+		<title>AdvancedNMotd Documentation</title>
+	</head>
+	<body>
+		<theme-component></theme-component>
+		<menu-component></menu-component>
+		<report-component></report-component>
+		<div id="docs-body">
+			<h1 id="docs-title">Preparing extension | AdvancedNMotd documentation</h1>
+			<hr/>
+			<p class="docs-description">
+				In this tutorial you will learn how to create and register your own <span class="code-part">custom</span> placeholders.<br/><br/>
+				In this page I will be demonstrating how to create placeholder <span class="code-part">%onlinePlusOne%</span>, that returns value 1 player bigger than current online.<br/><br/>
+				Firstly, you need to create <span class="code-part">function</span>, that will be called when your placeholder is met and fill it with code.<br/><br/>
+				This is how you do it: (click image to open it in new window)<br/><br/>
+				<img class="code" src="images/docs/registeringPlaceholders/step1.png" alt="Registering placeholders. Step 1." onclick="window.location.href='images/docs/registeringPlaceholders/step1.png';"/><br/><br/>
+				In this code important parts are:<br/><br/>
+				<ol>
+					<li>We implement <span class="code-part">IPlaceholder</span> interface by overriding its only function <span class="code-part">apply</span>.</li>
+					<li>Function apply contains the following arguments:
+						<ul>
+							<li>lineToParse (String): line that contains our placeholder.</li>
+							<li>startIndex (int): index to the begin '%' symbol of our placeholder.</li>
+							<li>endIndex (int): index to the last '%' symbol of our placeholder.</li>
+							<li>arguments (ArrayList<String>): placeholder arguments that go after ':' symbol (list is empty when placeholder has no arguments).</li>
+							<li>isScreeningSmart (boolean): </li>
+						</ul>
+					</li>
+					<li>We check whether our placeholder has valid arguments (both amount and presentation)</li>
+					<li>After we did some work we return Pair with elements:
+						<ul>
+							<li>String: line where our placeholder is replaced by its result.</li>
+							<li>Integer: index right after content for which our placeholder was replaced.</li>
+						</ul>
+					</li>
+				</ol><br/><br/>
+				
+				
+				It should be mentioned, that we can achieve same behaviour without creating an extension with the help of <span class="code-part">diamond brackets</span>.
+				Open <span class="code-part">AdvancedNMotd/aliases/placeholders.yml</span> file an add the following line there:
+				<span class="code-part">onlinePlusOne: '<parse "calc: %online% + 1"; return "%this%";>:'</span>
+				This is stated here, because sometimes it can be easier to use this technology.
+			</p>
+		</div><br/>
+	</body>
+</html>

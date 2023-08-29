@@ -1,0 +1,658 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #FFFFFF; /*Был #ECEFF1*/
+	/*background-image: linear-gradient(to left top, #E0EAFC, #CFDEF3);*/
+}
+
+#page {
+	background-color: #FFFFFF; /*Был #FAFAFA*/
+	width: 100%; /*Был 1280px*/
+	margin: 0 auto;
+	/*border: 1px solid #A3A5A6;*/
+	height: 2100px;
+}
+
+/*Donwload button*/
+.button-o {
+	width: 240px;
+	height: 40px;
+	border-radius: 25px;
+	font: bold 16px/40px Montserrat;
+	text-align: center;
+	user-select: none;
+	color: #F5F5F5;
+	filter: drop-shadow(rgb(0, 0, 0) 1px 1px 5px);
+	position: fixed;
+	transition: 0.3s background-color, 0.1s transform;
+	z-index: 2;
+}
+
+.button-o:active {
+	transform: scale(0.95, 0.95);
+}
+
+#download-button {
+	right: 20px;
+	bottom: 20px;
+	background-color: #112233;
+	z-index: 3;
+}
+
+#download-button:hover {
+	background-color: #9E9E9E;
+}
+
+@keyframes download-button-pulse {
+	from {
+		transform: scale(1, 1);
+		/*background-color: #112233;*/
+	}
+	50% {
+		transform: scale(1.2, 1.2);
+		/*background-color: #654321;*/
+	}
+	to {
+		transform: scale(1, 1);
+		/*background-color: #112233;*/
+	}
+}
+
+#request-button {
+	right: 20px;
+	bottom: 70px;
+	background-color: #223344;
+}
+
+#request-button:hover {
+	background-color: #9E9E9E;
+}
+
+#suggest-button {
+	right: 20px;
+	bottom: 120px;
+	background-color: #334455;
+	
+}
+
+#suggest-button:hover {
+	background-color: #9E9E9E;
+}
+
+/*Выделение на странице*/
+*::selection {
+	background-color: #112233;
+	color: #F0F0F0;
+}
+
+*::-moz-selection {
+	background-color: #112233;
+	color: #F0F0F0;
+}
+
+/*Top Sites Box*/
+#top {
+	width: 100%; /*Был 1280px*/
+	height: 700px; /*Был 410px*/
+	margin: 0 auto;
+	background-color: #0277BD;
+	border-radius: 0 0 50% 50%; /*Был 0 0 25px 25px*/
+}
+
+/*header*/
+#header {
+	width: 880px; /*Был 880px*/
+	margin: 0 auto;
+	user-select: none;
+}
+
+#menu {
+	float: right;
+	margin-left: -500px;
+}
+
+#menu > li {
+	float: right;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	list-style: none;
+	margin-top: -27px;
+	transition: 0.3s color;
+	font: 12px Montserrat;
+}
+
+#menu > li a {
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+	color: #FFFFFF;
+}
+
+#menu > li a::after {
+    display: block;
+    content: "";
+    background-color: #FFFFFF;
+    height: 2px;
+    width: 0%;
+    left: 50%;
+    position: absolute;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#menu > li a:hover::after {
+    width: 100%;
+}
+
+#menu > li::after {
+	content: '|';
+	color: #FFFFFF;
+	padding: 10px;
+}
+
+#menu > li:nth-child(1)::after {
+	content: '';
+}
+
+#logo {
+	font: 16px Montserrat;
+	color: #FFFFFF;
+}
+
+#welcome-plugin {
+	margin: 0 auto;
+	margin-top: 100px;
+	width: 600px;
+	color: #FFFFFF;
+}
+
+#name {
+	font: 72px Montserrat;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+#slogan {
+	font: italic 18px Montserrat;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+#slider {
+	height: 100px;
+	background-color: #4E342E;
+	margin: 0 auto;
+	margin-top: 32px; /*Был 15px*/
+	width: 90%;
+	border-radius: 25px;
+	user-select: none;
+}
+
+.slide > p > img {
+	display: block;
+	margin: 0 auto;
+	height: 100px;
+}
+
+/*Main block*/
+#main-block {
+	width: 100%; /*Был 1280px*/
+	height: 100px;
+}
+
+#getStarted {
+	font: 48px 'Didact Gothic';
+	color: #424242;
+	/*margin-left: 500px;*/ /*Был 205px*/
+	width: 925px;
+	margin: 0 auto;
+	margin-top: 25px;
+	/*width: 100%;*/
+}
+
+.spoiler {
+	background-color: #BDBDBD;
+	font: 15px Arial;
+	padding: 10px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	width: 250px;
+	height: 50px;
+	color: #112233;
+	user-select: none;
+	transition: 0.3s background-color, 0.5s opacity, 0.1s transform;
+}
+
+.spoiler:focus {
+	transform: scale(0.95, 0.95);
+}
+
+.spoiler:hover {
+	background-color: #C7C7C7;
+	opacity: 0.8;
+}
+
+.reset {
+	color: #FF0000;
+	position: relative;
+	top: 13px;
+	user-select: none;
+	transition: 0.3s color, 0.1s background-color;
+}
+
+.reset:hover {
+	color: indianred;
+	background-color: #112233;
+}
+
+.reset:hover::after {
+	content: 'Reset to default';
+	font: 20px 'Didact Gothic';
+	position: absolute;
+	color: #F0F0F0;
+	background-color: #112233;
+	width: 220px;
+	text-align: center;
+	border-radius: 10px;
+	padding: 15px;
+	opacity: 0.9;
+	top: 70px;
+	left: -205px;
+}
+
+/*What is get started*/
+#getStarted > div > p {
+	color: #424242;
+	font: 16px Montserrat;
+	margin-top: 20px;
+}
+
+/*Line between colons*/
+.line {
+	background-color: #353535;
+	width: 384px;
+	height: 2px;
+	margin: 0 auto;
+	margin-top: 57px;
+}
+
+/*Team section*/
+#pluginTeam > p {
+	font: 48px 'Didact Gothic';
+	color: #424242;
+	/*margin-left: 500px;*/ /*Был 205px*/
+	width: 925px;
+	margin: 0 auto;
+	margin-top: 55px;
+}
+
+#pluginTeam > ul {
+	font: 26px 'Didact Gothic';
+	color: #424242;
+	/*margin-left: 535px;*/ /*Был 235px*/
+	width: 860px;
+	margin: 0 auto;
+	margin-top: 15px;
+}
+
+/*Statistics*/
+#stats-box {
+	background-color: #B0BEC5;
+	width: 920px;
+	height: 170px;
+	border-radius: 15px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+#stats-box > p:first-child {
+	font: 52px Montserrat;
+	color: #3E2723;
+	text-align: left;
+	white-space: pre;
+	position: relative;
+	top: 15px;
+	user-select: none;
+}
+
+#stats-box > p:last-child {
+	font: bolder 52px Montserrat;
+	color: #FFFFFF;
+	text-shadow: 1px 1px 2px #000000;
+	white-space: pre;
+	position: relative;
+	top: 20px;
+	user-select: none;
+}
+
+/*Reviews Box*/
+#reviews-box {
+	margin: 0 auto;
+	width: 1222px;
+	margin-top: 45px;
+}
+
+#reviews-box > ul > li {
+	list-style: none;
+	height: 110px;
+	float: left;
+	background-color: #FFFFFF;
+	box-shadow: 1px 2px 1px #FFFFFF;
+	border: 2px solid #F0F0F0;
+	border-radius: 10px;
+	width: 300px;
+	padding: 10px;
+	font: 15px Arial;
+}
+
+#reviews-box > ul > li > span {
+	font: 20px Impact;
+	color: #A3A3A3;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/*Let's start*/
+#lets-start {
+	background-color: #110022;
+	width: 340px;
+	height: 40px;
+	border-radius: 25px;
+	font: bold 16px/40px Montserrat;
+	text-align: center;
+	user-select: none;
+	position: absolute;
+	transition: 0.3s background-color;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 620px;
+	border: 2px solid #000000;
+	box-shadow: 1px 1px 1px #000000;
+	opacity: 0.8;
+}
+
+#lets-start:hover {
+	background-color: #FFFFFF;
+}
+
+#anchor1 {
+	display: block;
+	text-decoration: none;
+	color: #F5F5F5;
+	cursor: default;
+}
+
+#anchor1:hover {
+	color: #112233;
+}
+
+/*Extensions*/
+#extensions {
+	font: 48px 'Didact Gothic';
+	color: #424242;
+	/*margin-left: 500px;*/ /*Был 205px*/
+	width: 925px;
+	margin: 0 auto;
+	margin-top: 55px;
+}
+
+#extensions > p:nth-child(2) {
+	color: #424242;
+	font: 16px Montserrat;
+	margin-top: 10px;
+}
+
+/*Links*/
+.text-link {
+	color: #0277BD;
+	font-style: italic;
+}
+
+.text-link:hover {
+	color: #0000FF;
+}
+
+/*Market-minimized*/
+#mini-market {
+	width: 940px;
+	margin-top: 20px;
+	margin-left: -10px;
+}
+
+#mini-market > ul > li {
+	list-style: none;
+	height: 60px;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+#mini-market > ul > li > p {
+	position: relative;
+	left: 30px;
+	top: 10px;
+}
+
+#mini-market > ul > li > p:nth-child(2) {
+	top: 5px;
+}
+
+#mini-market > ul > li:nth-child(2n+1) {
+	background-color: #E0E0E0;
+}
+
+#mini-market > ul > li:nth-child(2n) {
+	background-color: #BDBDBD;
+}
+
+#mini-market > ul > li:nth-child(2n+1) > p:first-child {
+	font: 24px Montserrat;
+	color: #9E9E9E;
+	text-shadow: 1px 1px 3px #BDBDBD;
+}
+
+#mini-market > ul > li:nth-child(2n+1) > p:nth-child(2) {
+	font: 12px Montserrat;
+	color: #424242;
+}
+
+.download-extension,
+.see-more-extensions {
+	background-color: #03A9F4;
+	border-radius: 25px;
+	color: #FFFFFF;
+	font: 16px/40px Montserrat;
+	width: 240px;
+	height: 40px;
+	text-align: center;
+	user-select: none;
+	transition: 0.3s background-color;
+}
+
+.download-extension {
+	position: relative;
+	top: -33px;
+	right: 20px;
+	float: right;
+}
+
+.see-more-extensions {
+	margin-top: 10px;
+}
+
+.download-extension:hover,
+.see-more-extensions:hover {
+	background-color: #333333;
+}
+
+#mini-market > ul > li:nth-child(2n) > p:first-child {
+	font: 24px Montserrat;
+	color: #FFFFFF;
+	text-shadow: 1px 1px 3px #9E9E9E;
+}
+
+#mini-market > ul > li:nth-child(2n) > p:nth-child(2) {
+	font: 12px Montserrat;
+	color: #424242;
+}
+
+/*Footer*/
+#footer {
+	margin-top: 45px;
+	height: 100px;
+	background-color: #0277BD;
+	border-radius: 25px 25px 0 0;
+	color: #E0E0E0;
+	font: 16px Montserrat;
+}
+
+#footer > div {
+	margin: 0 auto;
+	width: 1050px;
+}
+
+#footer > div > .footer-text-1 {
+	width: 650px;
+	height: 58px;
+	position: relative;
+	top: 20px;
+}
+
+#footer > div > .footer-text-2 {
+	position: relative;
+	width: 204px;
+	left: 828px;
+	top: -40px;
+}
+
+#footer > div > input {
+	font: 14px Montserrat;
+	width: 240px;
+	border: none;
+	outline: none;
+	background-color: #F5F5F5;
+	border-radius: 25px;
+	height: 30px;
+	text-align: center;
+	position: relative;
+	float: right;
+	top: -12px;
+}
+
+/*Message appears when download is ready*/
+#download-prepared-box {
+	background-color: rgba(127, 127, 127, 0.5);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	display: none;
+	backdrop-filter: blur(5px);
+}
+
+#download-prepared {
+	position: fixed;
+	width: 80%;
+	height: 50px;
+	font: 25px/50px Montserrat;
+	color: #F0F0F0;
+	bottom: 10px;
+	border-radius: 20px;
+	text-align: center;
+	box-shadow: 6px 3px 1px #000000;
+	margin-left: 50px;
+	background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: moving-msg-bg 10s ease infinite;
+}
+
+@keyframes moving-msg-bg {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#download-pre-confirm {
+	position: absolute;
+	width: 79%;
+	height: 620px;
+	background-color: #FFFFFF;
+	border: 10px double #000000;
+	border-radius: 10px;
+	margin-left: 50px;
+	top: 240px;
+	left: 0;
+}
+
+#download-info {
+	position: absolute;
+	width: 79%;
+	height: 50px;
+	background-color: #FFFFFF;
+	border: 10px double #C7C7C7;
+	box-shadow: 6px 3px 1px #000000;
+	border-radius: 10px;
+	margin-left: 50px;
+	top: 110px;
+	left: 0;
+	font: 40px/50px Montserrat;
+	padding: 20px;
+	color: #112233;
+}
+
+#close-prepared-box {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 50px;
+	height: 50px;
+	background-color: #C7C7C7;
+	font: 25px/50px Montserrat;
+	color: #A3A3A3;
+	text-align: center;
+	border: 5px solid #000000;
+	padding: 5px;
+	border-radius: 25px;
+	user-select: none;
+	text-shadow: 1px 2px 1px #000000;
+}
+
+#close-prepared-box:hover {
+	background-color: #F0F0F0;
+}
+
+/*Webkit Scrollbar*/
+body::-webkit-scrollbar {
+    max-width: 5px;
+}
+ 
+body::-webkit-scrollbar-track {
+	background-color: #112233;
+}
+ 
+body::-webkit-scrollbar-thumb {
+    background-color: #C7C7C7;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #A3A3A3;
+}
+
+body::-webkit-scrollbar-thumb:active {
+    background-color: dimgray;
+}

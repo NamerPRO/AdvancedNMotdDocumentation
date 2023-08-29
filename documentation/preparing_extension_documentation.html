@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru-ru">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="description" content="The official AdvancedNMotd API documentation page."/>
+		<meta name="keywords" content="AdvancedNMotd api, AdvancedNMotd, AdvancedNMotdAPI, AdvancedNMotd extension, AdvancedNMotdExtension, AdvancedNMotd custom furmat rule, AdvancedNMotd custom placeholder"/>
+		<meta name="author" content="NamerPRO"/>
+		<link rel="stylesheet" type="text/css" href="css/docs-article.css"/>
+		
+		<script type="text/javascript" src="js/documentation.js"></script>
+		
+		<!-- Connecting HTML tags: theme-component, menu-component, report-component -->
+		<script type="text/javascript" src="js/docsMenuElement.js"></script>
+		<script type="text/javascript" src="js/docsThemeElement.js"></script>
+		<script type="text/javascript" src="js/docsReportElement.js"></script>
+		<!-- End of connecting HTML tags: theme-component, menu-component, report-component -->
+		
+		<title>AdvancedNMotd Documentation</title>
+	</head>
+	<body>
+		<theme-component></theme-component>
+		<menu-component></menu-component>
+		<report-component></report-component>
+		<div id="docs-body">
+			<h1 id="docs-title">Preparing extension | AdvancedNMotd documentation</h1>
+			<hr/>
+			<p class="docs-description">
+				In this tutorial we are going to prepare extension, so AdvancedNMotd would be able to see it.<br/><br/>
+				Firstly, you need to create a project and add <span class="code-part">AdvancedNMotd.jar</span> as a library. I will not be leaving any comments here, because these are common actions that you should know.<br/><br/>
+				Secondly, create main class and extend from <span class="code-part">AdvancedNMotdExtension</span> class. This class is abstract, with the only abstract method <span class="code-part">onExtensionEnable</span>. This means you must override it. You may not override <span class="code-part">onExtensionDisable</span> method. As can be guessed from names method <span class="code-part">onExtensionEnable</span> is called right after extension was loaded by AdvancedNMotd and <span class="code-part">onExtensionDisable</span> is called right before extension is unloaded.<br/><br/>
+				This is how you begin:<br/><br/>
+				<img class="code" src="images/docs/prepareExtension/step1.png" alt=" Preparing extension. Step 1."/><br/><br/>
+				Thirdly, you need to create <span class="code-part">passport.yml</span> file where provide basic information about extension that will be accessed by <span class="code-part">AdvancedNMotd</span> when it loads it. A good analogy would be a creation of <span class="code-part">plugin.yml</span> file when developing a plugin for the <span class="code-part">Spigot</span> server.<br/><br/>
+				The <span class="code-part">passport.yml</span> file is created in <span class="code-part">src</span> folder and looks like:<br/><br/>
+				<img class="code" src="images/docs/prepareExtension/step2.png" alt=" Preparing extension. Step 2."/><br/><br/>
+				Where in <span class="code-part">main</span> section is presented path to main class we created. Note, that <span class="code-part">every</span> field of <span class="code-part">passport.yml</span> file must be written in it. Otherwise, <span class="code-part">AdvancedNMotd</span> will throw an exception.<br/><br/>
+				Congratulations! You have successfully prepared extension that can be loaded by <span class="code-part">AdvancedNMotd</span>. Every extension must be located in <span class="code-part">AdvancedNMotd/extensions</span> folder.<br/><br/>
+				If you did everything right, you should see the following output in the console:<br/><br/>
+				<img style="filter: invert(0);" class="code" src="images/docs/prepareExtension/step3.png" alt=" Preparing extension. Step 3."/><br/><br/>
+				<sub>If you don't know how to create a project or how to build jar file, please, use Google. There are a lot of videos about it.</sub>
+			</p>
+		</div><br/>
+	</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="description" content=""/>
+		<meta name="keywords" content=""/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<script type="text/javascript" src="js/getStarted.js"></script>
+		<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+		<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+		<title>AdvancedNMotd</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com"/>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com"/>
+		<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet"/>
+	</head>
+	<body>
+		<div id="suggest-button" class="button-o">Suggest Feature</div>
+		<div id="request-button" class="button-o">Requested Support</div>
+		<div id="download-button" class="button-o" onclick="downloadPlugin();">Download (FREE!)</div>
+		<div id="page">
+			<div id="top">
+				<div id="header">
+					<p id="logo">
+						<img style="position: relative; top: 12px; left: -20px;" width="50px" height="50px" src="images/icon.jpg" alt="logo_anm"/>
+						AdvancedNMotd
+					</p>
+					<ul id="menu">
+						<li><a href="#">Contact Me</a></li>
+						<li><a href="#">Exctentions</a></li>
+						<li><a href="#">Download</a></li>
+						<li><a href="#" onclick="alertMessage('Make your unforgettable motd now! Try AdvancedNMotd with its brilliant and easy to understand configuration. It will make your motd been unique and impressionable! Plugin has no required dependencies, included update checking option, integrated configuration check and works for all spigot servers + bungeecord. Find out everything what it can by following this link: <a class=\'text-link\' href=\'https://www.spigotmc.org/resources/advancednmotd-let-your-motd-smile.58677/\' target=\'_blank\'>https://www.spigotmc.org/resources/advancednmotd-let-your-motd-smile.58677/</a>');">About</a></li>
+						<li><a href="#">Main</a></li>
+					</ul>
+				</div>
+				<div id="welcome-plugin">
+					<p id="name">AdvancedNMotd</p>
+					<p id="slogan">Let your motd smile</p>
+				</div>
+				<section id="slider">
+					<div class="slider-wrapper">
+						<div class="slide">
+							<p><img src="images/anm_three.png" alt="photo"/></p>
+						</div>
+						<div class="slide">
+							<p><img src="images/anm_four.png" alt="photo"/></p>
+						</div>
+						<div class="slide">
+							<p><img src="images/anm_five.png" alt="photo"/></p>
+						</div>
+						<div class="slide">
+							<p><img src="images/anm_one.png" alt="photo"/></p>
+						</div>
+						<div class="slide">
+							<p><img src="images/anm_two.png" alt="photo"/></p>
+						</div>
+					</div>
+				</section>
+				<script type="text/javascript">
+					$(function () {
+						$('.slider-wrapper').bxSlider({
+							useCSS: false,
+							auto: true,
+							pager: false,
+							autoStart: true,
+							controls: false
+						});
+					});
+				</script>
+				<div id="reviews-box">
+					<ul>
+						<li style="width: 300px;">
+							<span onclick="window.open('https://www.spigotmc.org/members/tophtoph.982102/')">TophToph</span>
+							<p>
+								Works great. Easy to configure. Whenever you need help, they're there for you. They respond quickly and get to the bottom of the problem 10/10 plugin & 10/10 support
+							</p>
+						</li>
+						<li style="width: 500px; margin-left: 25px;">
+							<span onclick="window.open('https://www.spigotmc.org/members/raphaelsimon.41581/')">RaphaelSimon</span>
+							<p>
+								If you don't use this plugin for your MOTD you're totally crazy. Does everything any MOTD plugin does, with a lot of neat concepts. Seems like the developer knows what he's doing and, without knowing how, he just adds stuff that you don't even know you needed such as random MOTD and random icons...
+								(read full comment at official plugin page)
+							</p>
+						</li>
+						<li style="width: 300px; margin-left: 25px;">
+							<span onclick="window.open('https://www.spigotmc.org/members/korleorion.72411/')">Korleorion</span>
+							<p>
+								A great plugin that does what it says on the tin.
+								Better and with more options than other Mtod that I have seen.
+								Very simple handling.
+								If you have any problem, its author responds quickly.
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div id="lets-start">
+					<a id="anchor1" href="documentation/documentation_article_selector.html">Developer / User Documentation</a> <!-- Было: Lets find the plugin that's right for you -->
+				</div>
+			</div>
+			<div id="main-block">
+				<div id="getStarted">
+					<a name="getStartedAnchor" id="getStartedAnchor"></a>
+					<p>Get Started <span style="font-size: 18px;">(helps to navigate)</span></p>
+					<div>
+						<select class="spoiler s-one" onchange="nextSelect(this)">
+							<option selected disabled>Select An Action</option>
+							<option>AdvancedNMotd</option>
+							<option>Usage guide</option>
+							<option>FAQ</option>
+						</select>
+						<select disabled style="margin-left: 50px;" class="spoiler s-two" onchange="nextSelect(this)">
+							<option selected disabled>Select previous filed</option>
+						</select>
+						<select disabled style="margin-left: 50px;" class="spoiler s-three" onchange="nextSelect(this)">
+							<option selected disabled>Select previous filed</option>
+						</select>
+						<span class="reset" onclick="//resetSpoilers();">&#11198;</span>
+						<p>Will help you choose the plugin that is optimized<br/>for your server as much as possible.</p>
+					</div>
+				</div>
+				<div class="line"></div>
+				<div id="pluginTeam">
+					<p>Team:</p>
+					<ul>
+						<li>NamerPRO - main developer of the plugin.</li>
+					</ul>
+				</div>
+				<div class="line"></div>
+				<div id="pluginTeam">
+					<p>Impressive Statistics:</p>
+					<div id="stats-box">
+						<p>    Downloads      Reviews      Price</p>
+						<p>        79.000+            &#62;150           free</p>
+					</div>
+				</div>
+				<div class="line"></div>
+				<div id="extensions">
+					<p>Extensions:</p>
+					<p>Download the additions that you missed seeing<br/>in the plugin. See how to install them <a href="#" class="text-link" onclick="alert('Feature is currently unavailable. Please, try again later.');">here</a>.</p>
+					<div id="mini-market">
+						<ul>
+							<li>
+								<p>Timer - set timer and special text on its finish!</p>
+								<p>Author: NamerPRO</p>
+								<div class="download-extension" onclick="alert('Extension is not yet released! Please, check later.');">Coming soon...</div>
+							</li>
+							<li>
+								<p>Online+1 - get online 1 player biggen then real!</p>
+								<p>Author: NamerPRO</p>
+								<div class="download-extension" onclick="alert('Extension is not yet released! Please, check later.');">Coming soon...</div>
+							</li>
+							<li>
+								<p>StringUtils - format rules kit for diamond brackets</p>
+								<p>Author: NamerPRO</p>
+								<div class="download-extension" onclick="alert('Extension is not yet released! Please, check later.');">Coming soon...</div>
+							</li>
+							<li>
+								<p>More comming soon...</p>
+								<p>(you can upload your extensions at this site)</p>
+								<div class="download-extension" onclick="alert('Function is currently unavailable! Please, try again later.');">Upload Extension</div>
+							</li>
+						</ul>
+					</div>
+					<div class="see-more-extensions">See all extensions</div>
+				</div>
+				<div id="footer">
+					<div>
+						<p class="footer-text-1">AdvancedNMotd - an advanced motd solution for your server which is developed for more than four years in order to bring you the most enjoyable plugin experience.</p>
+						<input id="inp" type="text" onkeydown="if(event.keyCode==13) { if(this.value.trim()!='') { window.open('https://www.spigotmc.org/conversations/add?to=NamerPRO&title=AdvancedNMotd%20|%20Contact%20| '+this.value.trim()); } else { alertMessage('You entered an empty string!\nPlease, formulate reason of your request and try again.'); } }" onclick="if(this.value=='') { alertMessage('Enter a brief reason for contact (15 characters maximum)\nOnce you finish typing a message do not forget to press enter.\nClose this window to start typing.\n\n(you must be registered at spigotmc.org in order to use this feature)'); }" placeholder="Brief reason for contact ..." maxlength="15"/>
+						<p class="footer-text-2">Want me to contact you?</p>
+					</div>
+				</div>
+			</div>
+			<!-- Choose Download Option. Include universal jar. Only optimized jar file -->
+			<!-- Find the plugin that's right for you -->
+		</div>
+		<div id="download-prepared-box">
+			<div id="close-prepared-box" onclick="resetSpoilers();">
+				X
+			</div>
+			<div id="download-info">
+				Download information:
+			</div>
+			<div id="download-pre-confirm">
+				
+			</div>
+			<div id="download-prepared">
+				Your download is almost ready! Click pulsing button →
+			</div>
+		</div>
+		<script src="js/smoothlinks.js"></script>
+	</body>
+</html>

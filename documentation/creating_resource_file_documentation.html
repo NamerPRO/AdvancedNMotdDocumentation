@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru-ru">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="description" content="The official AdvancedNMotd API documentation page."/>
+		<meta name="keywords" content="AdvancedNMotd api, AdvancedNMotd, AdvancedNMotdAPI, AdvancedNMotd extension, AdvancedNMotdExtension, AdvancedNMotd custom furmat rule, AdvancedNMotd custom placeholder"/>
+		<meta name="author" content="NamerPRO"/>
+		<link rel="stylesheet" type="text/css" href="css/docs-article.css"/>
+		
+		<script type="text/javascript" src="js/documentation.js"></script>
+		
+		<!-- Connecting HTML tags: theme-component, menu-component, report-component -->
+		<script type="text/javascript" src="js/docsMenuElement.js"></script>
+		<script type="text/javascript" src="js/docsThemeElement.js"></script>
+		<script type="text/javascript" src="js/docsReportElement.js"></script>
+		<!-- End of connecting HTML tags: theme-component, menu-component, report-component -->
+		
+		<title>AdvancedNMotd Documentation</title>
+	</head>
+	<body>
+		<theme-component></theme-component>
+		<menu-component></menu-component>
+		<report-component></report-component>
+		<div id="docs-body">
+			<h1 id="docs-title">Creating resources | AdvancedNMotd documentation</h1>
+			<hr/>
+			<p class="docs-description">
+				Class <span class="code-part">AdvancedNMotdExtension</span> that you extend in your main extension class contains a method named <span class="code-part">saveResource</span> which has signature:<br/><br/>
+				<img class="code" src="images/docs/saveResource/saveResourceSignature.png" alt="SaveResource method signature."/><br/><br/>
+				You can use this method to create any resource file you want. It must not be only <span class="code-part">.yml</span> file, but can also be of <span class="code-part">.png</span>, <span class="code-part">.txt</span> and any other type.<br/><br/>
+				However, if you create <span class="code-part">.yml</span> configuration file, method returns you <span class="code-part">IConfiguration</span> object that can be used to get access to configuration fields. Otherwise, it returns <span class="code-part">null</span>.<br/><br/>
+				It should be mentioned that since you work with configuration via <span class="code-part">IConfiguration</span> interface you should not bouther about server under which your extension is run (no need to care whether use <span class="code-part">org.bukkit.configuration.file.FileConfiguration</span> for <span class="code-part">spigot</span> servers or <span class="code-part">net.md_5.bungee.config.Configuration</span> for bungee).<br/><br/>
+				Configuration files will be created at <span class="code-part">AdvancedNMotd/extensions/YourExtensionName</span> folder if not already exist there. For any existed <span class="code-part">.yml</span> files you will get <span class="code-part">IConfiguration</span> object of it.<br/><br/>
+				Example:<br/><br/>
+				<img class="code" src="images/docs/saveResource/exampleOfUsage.png" alt="Example of usage saveResource method in main class."/><br/><br/>
+				To use this method in any class other than your main one, the simpliest way would be to do:<br/><br/>
+				<img class="code" src="images/docs/saveResource/exampleOfUsageInOtherClass.png" alt="Example of usage saveResource method in other than main class."/><br/>
+			</p>
+		</div><br/>
+	</body>
+</html>
