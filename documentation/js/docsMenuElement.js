@@ -72,7 +72,7 @@ class DocsMenuElement extends HTMLElement {
 								<li onclick="window.location.href='./preparing_extension_documentation.html';">Preparing extension</li>
 								<li onclick="window.location.href='./creating_resource_file_documentation.html';">Creatings resources</li>
 								<li>&#128274; Registering format rules</li>
-								<li onclick="window.location.href='./registering_placeholders.html';"> Registering placeholders</li>
+								<li>&#128274; Registering placeholders</li>
 							</ul>
 						</li>
 					</ul>

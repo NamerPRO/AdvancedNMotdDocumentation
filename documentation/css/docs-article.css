@@ -131,10 +131,53 @@ body {
 /* End documentation body style */
 
 /* Mobile styling */
+#mobile-header {
+	display: none;
+}
+
 @media screen and (max-width: 1800px){
+
+	#docs-body {
+		margin-top: 80px;
+	}
 	
-	#docs-menu {
+	#docs-menu,
+	#docs-report {
 		display: none;
+	}
+	
+	#docs-theme-toggle-button {
+		display: none;
+		/*content: "Theme: ";
+		right: 80px;*/
+	}
+	
+	#mobile-header {
+		display: block;
+		top: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		position: absolute;
+	}
+	
+	#mobile-header ul {
+		width: 1000px;
+		padding: 10px;
+	}
+	
+	#mobile-header li {
+		border-right: 2px solid var(--docs-body-color);
+		float: left;
+		list-style: none;
+		font: 20px Arial;
+		color: var(--docs-body-color);
+		padding: 10px;
+		background-color: var(--body-background-color);
+		cursor: default;
+	}
+	
+	#mobile-header li:last-child {
+		border-right: none;
 	}
 
 }
