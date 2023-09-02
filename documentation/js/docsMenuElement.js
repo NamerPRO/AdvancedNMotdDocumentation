@@ -10,13 +10,14 @@ class DocsMenuElement extends HTMLElement {
 			/* Documentation list style */
 
 			menu-component > #docs-menu {
+				width: 18vw;
 				position: fixed;
 				top: 50%;
 				transform: translateY(-50%);
 				background-color: var(--docs-menu-background-color);
-				border: 2px solid var(--docs-menu-border-color);
-				padding: 10px;
-				border-radius: 10px;
+				border: 0.1vw solid var(--docs-menu-border-color);
+				padding: 0.5vw;
+				border-radius: 0.5vw;
 				left: 1%;
 				cursor: default;
 				color: var(--docs-menu-color);
@@ -28,18 +29,18 @@ class DocsMenuElement extends HTMLElement {
 			}
 
 			menu-component > #docs-menu li {
-				font: 17px Arial;
-				padding: 10px;
+				font: 0.9vw Arial;
+				padding: 0.5vw;
 			}
 
 			menu-component > #docs-menu > ul > li > ul li {
-				margin-left: 20px;
+				margin-left: 1vw; /*20px*/
 			}
 
 			menu-component > #docs-menu > ul > li:first-child:hover,
 			menu-component > #docs-menu > ul > li > ul > li > ul > li:hover {
 				background-color: var(--docs-menu-list-items-hover-background-color);
-				border-radius: 10px;
+				border-radius: 0.5vw;
 			}
 
 			/* End documentation list style */
@@ -50,7 +51,7 @@ class DocsMenuElement extends HTMLElement {
 				<li onclick="window.location.href='../index.html';">About Plugin</li>
 				<li>Documentation
 					<ul>
-						<li style="margin-top: 10px;">DiamondBrackets
+						<li style="margin-top: 0.5vw;">DiamondBrackets
 							<ul>
 								<li>&#128274; Introducation & Syntax</li>
 								<li>&#128274; String command</li>

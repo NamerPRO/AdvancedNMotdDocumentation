@@ -11,15 +11,15 @@ theme-component #docs-theme {
 	right: 1%;
 	top: 1%;
 	color: var(--docs-theme-color);
-	font: 20px Arial;
+	font: 1.07vw Arial;
 }
 
 theme-component .switch::before {
 	display: block;
 	content: "Toggle documentation theme:";
-	width: 300px;
+	width: 20vw;
 	position: relative;
-	right: 270px;
+	right: 14.5vw;
 	top: 50%;
 	color: var(--switch-color-before);
 	transform: translateY(-50%);
@@ -27,9 +27,9 @@ theme-component .switch::before {
 
 theme-component .switch {
 	display: inline-block;
-	height: 34px;
+	height: 1.85vw;
 	position: relative;
-	width: 60px;
+	width: 3.23vw;
 }
 
 theme-component .switch input {
@@ -49,13 +49,13 @@ theme-component .slider {
 
 theme-component .slider::before {
   background-color: var(--slider-background-color-before);
-  bottom: 4px;
+  bottom: 0.2vw;
   content: "";
-  height: 26px;
-  left: 4px;
+  height: 1.4vw;
+  left: 0.2vw;
   position: absolute;
   transition: 0.4s;
-  width: 26px;
+  width: 1.4vw;
 }
 
 theme-component input:checked + .slider {
@@ -63,11 +63,11 @@ theme-component input:checked + .slider {
 }
 
 theme-component input:checked + .slider::before {
-  transform: translateX(26px);
+  transform: translateX(1.4vw);
 }
 
 theme-component .slider.round {
-  border-radius: 34px;
+  border-radius: 1vw;
 }
 
 theme-component .slider.round::before {

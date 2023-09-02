@@ -21,15 +21,15 @@ class DocsReportElement extends HTMLElement {
 
 			#docs-report li {
 				display: block;
-				font: 17px Arial;
+				font: 0.9vw Arial;
 				text-align: center;
-				padding: 10px;
-				border-radius: 25px;
-				border: 1px solid var(--docs-report-border-color);
-				width: 250px;
+				padding: 0.5vw;
+				border-radius: 1.2vw;
+				border: 0.1vw solid var(--docs-report-border-color);
+				width: 15vw;
 				color: var(--docs-report-color);
 				cursor: default;
-				margin-top: 5px;
+				margin-top: 0.2vw;
 				user-select: none;
 			}
 

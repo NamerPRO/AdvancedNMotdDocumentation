@@ -93,7 +93,7 @@ body {
 #docs-body {
 	margin: 0 auto;
 	margin-top: 10px;
-	width: 1000px;
+	width: 50%; /* was 1000px */
 	padding: 10px;
 	border-radius: 10px;
 	color: var(--docs-body-color);
@@ -135,7 +135,7 @@ body {
 	display: none;
 }
 
-@media screen and (max-width: 1800px){
+/*@media screen and (max-width: 1800px){
 
 	#docs-body {
 		margin-top: 80px;
@@ -149,7 +149,7 @@ body {
 	#docs-theme-toggle-button {
 		display: none;
 		/*content: "Theme: ";
-		right: 80px;*/
+		right: 80px;
 	}
 	
 	#mobile-header {
@@ -180,5 +180,5 @@ body {
 		border-right: none;
 	}
 
-}
+}*/
 /* End mobile styling */
